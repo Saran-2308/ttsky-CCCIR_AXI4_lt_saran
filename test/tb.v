@@ -18,7 +18,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+`timescale 1ns / 1ps
 module axi4lite_tb;
 
     //localparam ADDR_WIDTH = 2;
@@ -88,9 +88,5 @@ module axi4lite_tb;
             $display("TEST FAILED ? (Expected 0x04, Got 0x%h)", uio_out);
 
         #100 $finish;
-    end
-    initial begin
-    	$fsdbDumpfile("tt_um_axi4lite_top.fsdb");
-    	$fsdbDumpvars(0,axi4lite_tb);
     end
 endmodule
